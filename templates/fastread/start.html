@@ -1,0 +1,44 @@
+{% extends 'fastread/base.html' %} {%block head%} {% load static %} {%endblock%} {% block body %}
+<div class="container ">
+    <div class="jumbotron " id="config">
+        <div class="container ">
+            <b class="headline white">Configure your fast reading expirence</b>
+            <p class=" green">before we can get started, you need to configure the following parameters.</p>
+            <hr>
+
+
+            <p class="white inline">Readingspeed: </p>
+            <p class="white inline" id="readingSpeedOutput"> </p>
+            <p class="white inline"> words per minute</p>
+            <div class="slidecontainer">
+                <input type="range" min="50" max="1200" value="250" class="slider" id="readingSpeed">
+            </div>
+
+            <div class="textinputcontainer">
+                <p class="white">Text to Fastread</p>
+                <textarea id="textinput" rows="25" class="fullwidth">
+Speed Reading ist die Kunst, die Subvokalisation zum Schweigen zu bringen. Die meisten Leser haben eine durchschnittliche Lesegeschwindigkeit von 200 wpm, was ungefähr so schnell ist, wie sie eine Passage laut vorlesen können. Dies ist kein Zufall. Es ist ihre innere Stimme, die durch den Text schreitet, die sie davon abhält, eine höhere Lesegeschwindigkeit zu erreichen. Sie können nur so schnell lesen, wie sie sprechen können, weil das die Art und Weise ist, wie ihnen das Lesen beigebracht wurde, durch Lesesysteme wie Hooked on Phonics.
+Es ist jedoch durchaus möglich, mit einer viel höheren Geschwindigkeit zu lesen, mit einem viel besseren Leseverständnis, indem man diese innere Stimme zum Schweigen bringt. Die Lösung ist einfach - nehmen Sie den Lesestoff schneller auf, als die innere Stimme mithalten kann. 
+In der realen Welt wird dies durch Methoden wie das Lesen von Passagen mit Hilfe eines Fingers erreicht, der Ihnen den Weg weist. Sie lesen eine Textseite durch, indem Sie Ihrem Finger Zeile für Zeile mit einer Geschwindigkeit folgen, die schneller ist, als Sie normalerweise lesen können. Das funktioniert, weil das Auge sehr gut darin ist, Bewegungen zu verfolgen. Auch wenn an dieser Stelle das volle Leseverständnis verloren geht, ist es genau diese Trainingsmethode, die es Ihnen ermöglicht, schneller zu lesen.
+lesen Sie ständig Passagen mit einer höheren Geschwindigkeit, als Sie mithalten können, und gehen Sie immer wieder an die Grenze dessen, wozu Sie in der Lage sind. Sie werden feststellen, dass Sie beim Herunterschalten auf niedrigere Geschwindigkeiten viel mehr aufnehmen können, als Sie für möglich gehalten hätten.
+Viel Erfolg!
+                </textarea>
+            </div>
+
+
+            <div class="form-row text-center">
+                <div class="col-12">
+                    <button type="button" class="green-background white btn mx-auto d-block" onclick="StartFastReading()">Start!</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="reader">
+        <h1 class="white text-center centerVertical" id="reader">lets get started! (1s)</h1>
+    </div>
+</div>
+{% block scipts %}
+<script src="{%static 'fastread/js/fastread.js'%}"></script>
+{% endblock scipts %} {% endblock body %}
